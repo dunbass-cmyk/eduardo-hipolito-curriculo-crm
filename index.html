@@ -1,10 +1,291 @@
-eduardo-hipolito-curriculo-crm/
-├─ index.html
-├─ css/
-│  └─ style.css
-├─ js/
-│  └─ script.js
-└─ assets/
-   └─ img/
-      ├─ bg-manifesto.jpg
-      ├─ bg-experiencia.jpg
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eduardo Hipólito — UX / Marketing / Performance</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0b0c10;
+      --surface: #111218;
+      --card: #151724;
+      --text: #e8e8ea;
+      --muted: #9ba0aa;
+      --accent: #9aff00;
+      --accent-soft: rgba(154,255,0,0.15);
+      --border: rgba(255,255,255,0.08);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: radial-gradient(1200px 600px at 80% -20%, rgba(154,255,0,0.08), transparent 60%), var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 64px 40px 96px;
+    }
+
+    /* HERO */
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 48px;
+      align-items: center;
+      margin-bottom: 96px;
+    }
+
+    .hero h1 {
+      font-size: 56px;
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      margin: 0 0 16px;
+    }
+
+    .hero h1 span {
+      color: var(--accent);
+    }
+
+    .hero p {
+      font-size: 16px;
+      color: var(--muted);
+      max-width: 560px;
+    }
+
+    .hero-cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .stat {
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), transparent), var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 28px;
+      color: var(--accent);
+    }
+
+    .stat span {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    /* SECTIONS */
+    section {
+      margin-bottom: 96px;
+    }
+
+    .section-title {
+      font-size: 13px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 24px;
+    }
+
+    /* SKILLS */
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .skill-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 24px;
+    }
+
+    .skill-card h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+
+    .skill-card p {
+      font-size: 14px;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    /* EXPERIENCE */
+    .timeline {
+      position: relative;
+      margin-left: 12px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(var(--accent), transparent);
+    }
+
+    .job {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      gap: 32px;
+      padding: 32px 0 32px 32px;
+    }
+
+    .job time {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .job h3 {
+      margin: 0 0 8px;
+      font-size: 20px;
+    }
+
+    .job h3 span {
+      color: var(--muted);
+      font-weight: 400;
+    }
+
+    .job ul {
+      margin: 12px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .job ul li {
+      margin-bottom: 6px;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      padding-top: 32px;
+      font-size: 13px;
+      color: var(--muted);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 16px;
+    }
+
+    .links a {
+      margin-left: 16px;
+      opacity: 0.8;
+    }
+
+    .links a:hover { opacity: 1; }
+
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; }
+      .job { grid-template-columns: 1fr; }
+      footer { grid-template-columns: 1fr; }
+    }
+  </style>
+
+</head>
+<body>
+
+  <div class="container">
+
+```
+<header class="hero">
+  <div>
+    <h1>Eduardo<br><span>Hipólito</span></h1>
+    <p>
+      Profissional híbrido de <strong>UX/UI, marketing e performance</strong>, com foco em estruturar
+      processos, organizar dados e transformar design em resultado mensurável.
+    </p>
+  </div>
+  <div class="hero-cards">
+    <div class="stat"><strong>12+</strong><span>anos de experiência</span></div>
+    <div class="stat"><strong>CRM</strong><span>implantação & funil</span></div>
+    <div class="stat"><strong>Ads</strong><span>Meta & Google</span></div>
+    <div class="stat"><strong>UX</strong><span>interfaces e produto</span></div>
+  </div>
+</header>
+
+<section>
+  <div class="section-title">O que eu faço</div>
+  <div class="skills">
+    <div class="skill-card"><h3>UX & Produto</h3><p>Arquitetura da informação, interfaces claras e decisões orientadas a comportamento do usuário.</p></div>
+    <div class="skill-card"><h3>Marketing & Performance</h3><p>Campanhas digitais, tráfego pago, métricas, otimização de conversão e geração de leads.</p></div>
+    <div class="skill-card"><h3>CRM & Processos</h3><p>Estruturação de funil, organização comercial e integração entre marketing e vendas.</p></div>
+    <div class="skill-card"><h3>Comunicação Visual</h3><p>Design como ferramenta estratégica, não estética decorativa.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="section-title">Experiência</div>
+  <div class="timeline">
+
+    <div class="job">
+      <time>SEST SENAT</time>
+      <div>
+        <h3>Marketing, CRM & Performance <span>— Atual</span></h3>
+        <ul>
+          <li>Implantação e gestão de CRM e funil de vendas</li>
+          <li>Execução de campanhas estratégicas e tráfego pago</li>
+          <li>Análise de métricas, leads e conversão</li>
+          <li>Interface com agências e cobertura de eventos</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="job">
+      <time>I.C.E. Propaganda</time>
+      <div>
+        <h3>Marketing Digital & Tráfego Pago</h3>
+        <ul>
+          <li>Planejamento de campanhas digitais</li>
+          <li>Criação de funis de vendas e inteligência de marketing</li>
+          <li>Análise de dados e geração de leads</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="job">
+      <time>ENS Automotiva</time>
+      <div>
+        <h3>UX/UI & Experiência Digital</h3>
+        <ul>
+          <li>Design de interfaces e aplicativos</li>
+          <li>Foco em usabilidade e clareza visual</li>
+          <li>Soluções digitais para concessionárias</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div>São Paulo — SP · dunbassdesign@gmail.com</div>
+  <div class="links">
+    <a href="#">Behance</a>
+    <a href="#">GitHub</a>
+    <a href="#">LinkedIn</a>
+  </div>
+</footer>
+```
+
+  </div>
+
+</body>
+</html>
